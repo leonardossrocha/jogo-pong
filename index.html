@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <!-- meta tags basic -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- meta tags basic -->
+        
+        <!-- title page -->
         <title>Pong</title>
+        <!-- title page -->
+
+        <!-- style css  -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- style css  -->
     </head>
     <body>
-        <canvas id="canvas" width="800" height="500"></canvas>
+
+        <!-- jogo pong -->
+        <div class="wrapper">
+            <!-- tela do jogo pong -->
+            <canvas id="canvas" width="800" height="500"></canvas>
+            <!-- tela do jogo pong -->
+
+            <!-- controles do jogo pong -->
+            <div class="wrapper-joystick">
+
+                <!-- controle do player 1 -->
+                <div id="player-1" class="joystick">
+
+                    <!-- botão seta para cima, controle player 1 -->
+                    <button name="arrow-up" data-key="87" title="arrow-up">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </button>
+                    <!-- botão seta para cima, controle player 1 -->
+
+                    <!-- botão seta para baixo, controle player 1 -->
+                    <button name="arrow-down" data-key="83" title="arrow-down">
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                    </button>
+                    <!-- botão seta para baixo, controle player 1 -->
+
+                </div>
+                <!-- controle do player 1 -->
+
+                <!-- controle do player 2 -->
+                <div id="player-2" class="joystick">
+
+                    <!-- botão seta para cima, controle player 2 -->
+                    <button name="arrow-up" data-key="38" title="arrow-up">
+                        <ion-icon name="arrow-up-outline"></ion-icon>
+                    </button>
+                    <!-- botão seta para cima, controle player 2 -->
+                    
+                    <!-- botão seta para baixo, controle player 2 -->
+                    <button name="arrow-down" data-key="40" title="arrow-down">
+                        <ion-icon name="arrow-down-outline"></ion-icon>
+                    </button>
+                    <!-- botão seta para baixo, controle player 2 -->
+
+                </div>
+                <!-- controle do player 2 -->
+
+            </div> 
+            <!-- controles do jogo pong -->
+        
+        </div>
+        <!-- jogo pong -->
+
+        <!-- script do jogo pong -->
         <script src="./js/controller.js" type="text/javascript"></script>
+        <!-- script do jogo pong -->
+
+        <!-- icones dos botões do controle -->
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <!-- icones dos botões do controle -->
     </body>
     <!--Fonte: https://medium.com/@willyan.dantunes/criando-o-game-pong-com-js-em-menos-de-5-minutos-554d8a97a68d-->
 </html>
