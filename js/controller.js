@@ -107,4 +107,49 @@ document.addEventListener("keydown",function(ev){
         p2_key = ev.keyCode
 })
 
+// controles "joystick" do jogo 
+
+const joystick_player_1 = document.querySelector("#player-1")
+const joystick_player_2 = document.querySelector("#player-2")
+
+handleEventListenerJoystick(joystick_player_1, "player-1")
+handleEventListenerJoystick(joystick_player_2, "player-2")
+
+function handleEventListenerJoystick(joystick, player_action){
+    const spread = [...joystick.children]
+
+    spread.forEach(button => {
+        button.addEventListener("click", () => {
+            // botão do player 1
+            if(player_action === "player-1"){
+                // botão seta para cima, controle player 1
+                if(button.name === "arrow-up"){
+                    // exemplo = <button data-key="87"></button>
+                    p1_key = parseInt(button.dataset.key)
+                }
+                // botão seta para baixo, controle player 1
+                if(button.name === "arrow-down"){
+                    // exemplo = <button data-key="83"></button>
+                    p1_key = parseInt(button.dataset.key)
+                }
+            }
+            // botão do player 2
+            if(player_action === "player-2"){
+                // botão seta para cima, controle player 2
+                if(button.name === "arrow-up"){
+                    // exemplo = <button data-key="38"></button>
+                    p2_key = parseInt(button.dataset.key)
+                }
+                // botão seta para baixo, controle player 2
+                if(button.name === "arrow-down"){
+                    // exemplo = <button data-key="40"></button>
+                    p2_key = parseInt(button.dataset.key)
+                }
+            }
+        })
+    })
+}
+
+// controles "joystick" do jogo 
+
 setup()
