@@ -1,0 +1,84 @@
+/* reset css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* reset css*/
+
+/* colocar o jogo no centro da tela */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
+  padding: 5px;
+}
+/* colocar o jogo no centro da tela */
+
+/* faz com que a tela do jogo fique do tamanho do elemento pai */
+.wrapper #canvas{
+  width: 100%;
+}
+
+/* aplica estilo no elemento wrapper do controle */
+.wrapper 
+.wrapper-joystick{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+/* aplica estilo no elemento wrapper do controle */
+
+/* alinha os botões no centro do joystick "controle" */
+.wrapper 
+.wrapper-joystick 
+.joystick {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+/* alinha os botões no centro do joystick "controle" */
+
+/* adiciona estilo nos botões */
+.wrapper 
+.wrapper-joystick 
+.joystick button{
+  cursor: pointer;
+  border: none;
+
+  width: 60px;
+  height: 60px;
+  padding: 20px;
+
+  font-size: 20px;
+  border-radius: 5px;
+
+  background: #12121212;
+  color: #121212;
+  transition: background .2s ease;
+}
+/* adiciona estilo nos botões */
+
+/* adiciona estilo de hover nos botões */
+.wrapper 
+.wrapper-joystick 
+.joystick button:hover{
+  background: #12121228;
+}
+/* adiciona estilo de hover nos botões */
+
+/* adiciona estilo de click nos botões */
+.wrapper 
+.wrapper-joystick 
+.joystick button:active{
+  scale: .9;
+}
+/* adiciona estilo de click nos botões */
